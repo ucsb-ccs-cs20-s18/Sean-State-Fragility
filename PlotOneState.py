@@ -11,6 +11,8 @@ with open('state_fragility_onecountry.json') as json_data:
 
 n_groups = len(stateFragility)
 
+#Finds legitimacy and effectiveness scores for the country for each year
+
 legitimacy = []
 legitimacy_score = 0
 effectiveness = []
@@ -29,6 +31,8 @@ for state in stateFragility:
     legitimacy_score = 0
     effectiveness_score = 0
 
+#Configures plot
+    
 fig, ax = plt.subplots()
 
 index = np.arange(n_groups)
@@ -38,6 +42,8 @@ opacity = 0.4
 rects1 = ax.bar(index, legitimacy, bar_width, alpha=opacity, color='b', label='Legitimacy')
 rects2 = ax.bar(index + bar_width, effectiveness, bar_width, alpha=opacity, color='r', label='Effectiveness')
 rects3 = ax.bar(index + 2*bar_width, sfi, bar_width, alpha=opacity, color='g', label='SFI')
+
+#Further configures plot and displays plot if possible, if an error has occurred returns an exception
 
 try:
     ax.set_xlabel('Year')

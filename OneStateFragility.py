@@ -7,6 +7,8 @@ from random import randint
 
 with open('state_fragility.json') as json_data:
     stateFragility = json.load(json_data)
+
+#Takes user input to determine country and stores data from that country
 country = input("Please input a country: ")
 list_country = []
 for state in stateFragility:
