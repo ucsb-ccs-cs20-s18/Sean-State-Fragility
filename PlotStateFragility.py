@@ -39,13 +39,15 @@ rects1 = ax.bar(index, legitimacy, bar_width, alpha=opacity, color='b', label='L
 rects2 = ax.bar(index + bar_width, effectiveness, bar_width, alpha=opacity, color='r', label='Effectiveness')
 rects3 = ax.bar(index + 2*bar_width, sfi, bar_width, alpha=opacity, color='g', label='SFI')
 
-ax.set_xlabel('Country')
-ax.set_ylabel('Indices')
-ax.set_title('Indices by country')
-ax.set_xticks(index + bar_width)
-ax.set_xticklabels(countries)
-ax.legend()
-
-fig.tight_layout()
-plt.show()
+try:
+    ax.set_xlabel('Country')
+    ax.set_ylabel('Indices')
+    ax.set_title('Indices by country')
+    ax.set_xticks(index + bar_width)
+    ax.set_xticklabels(countries)
+    ax.legend()
+    fig.tight_layout()
+    plt.show()
+except IndexError:
+    print("No data for this year")
 
