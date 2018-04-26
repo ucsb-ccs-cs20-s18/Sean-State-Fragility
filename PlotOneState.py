@@ -46,7 +46,7 @@ try:
     ax.set_xticks(index + bar_width)
     ax.set_xticklabels(years)
     ax.legend()
-    plt.setp(ax.get_xticklabels(),rotation=30,horizontalalignment='right')
+    plt.setp(ax.get_xticklabels(),rotation=50,horizontalalignment='right')
     fig.tight_layout()
     plt.show()
 except IndexError:
