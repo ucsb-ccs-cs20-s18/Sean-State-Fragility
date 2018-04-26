@@ -40,9 +40,9 @@ rects2 = ax.bar(index + bar_width, effectiveness, bar_width, alpha=opacity, colo
 rects3 = ax.bar(index + 2*bar_width, sfi, bar_width, alpha=opacity, color='g', label='SFI')
 
 try:
-    ax.set_xlabel('Country')
+    ax.set_xlabel('Year')
     ax.set_ylabel('Indices')
-    ax.set_title('Indices by country')
+    ax.set_title(OneStateFragility.country.title() + ' indices by year')
     ax.set_xticks(index + bar_width)
     ax.set_xticklabels(years)
     ax.legend()
